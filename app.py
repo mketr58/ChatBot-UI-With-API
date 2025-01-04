@@ -23,24 +23,21 @@ def completeions():
             "type": model_info['type']
         }
     )
-    return chat_inference.chat(data=data,handle_stream=pipeline_dict['handle_stream'],user=request.remote_addr)
+    return chat_inference.chat(data=data,handle_stream=pipeline_dict['handle_stream'],user=request.headers.get("X-Forwarded-For").split(',')[0].strip())
     
 @app.route('/convs')
 def get_conv():
     print(request.remote_addr)
-    return convHandler.get_conv(request.remote_addr)
+    return convHandler.get_conv(request.headers.get("X-Forwarded-For").split(',')[0].strip())
 
 @app.route('/create', methods=['POST'])
 def create_conv():
     sysPrompt = request.json.get('system_prompt', '')
-    return convHandler.create_conv(ip=request.remote_addr,sysPrompt=sysPrompt)
+    return convHandler.create_conv(ip=request.headers.get("X-Forwarded-For").split(',')[0].strip(),sysPrompt=sysPrompt)
 @app.route('/fetch', methods=['POST'])
 def fetch():
     convId = request.json.get('convId')
-    return convHandler.fetch_conv(convId=convId,ip=request.remote_addr)
-@app.route('/update')
-def update():
-    return convHandler.update_conv(request.remote_addr, request.json)
+    return convHandler.fetch_conv(convId=convId,ip=request.headers.get("X-Forwarded-For").split(',')[0].strip())
 @app.route('/models')
 def models():
     return list(pipeline_dict['api']['models'].keys())
