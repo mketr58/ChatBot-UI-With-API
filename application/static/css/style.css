@@ -78,9 +78,7 @@ nav{
 .newChat{
     margin-top: 8vh;
     margin-left: 1vw;
-    background: linear-gradient(to right,rgb(206, 206, 206), rgb(87, 87, 87));
-    background-clip: text;
-    color: transparent;
+    color: gray;
     font-size: large;
     cursor: pointer;
     font-weight: 400;
@@ -137,7 +135,7 @@ nav{
 .container {
     width: 99.5%;
     max-width: 99.5%;
-    height: 91.5vh;
+    height: 90vh;
     position: absolute;
     z-index: 50;
     top: 8vh;
