@@ -28,7 +28,7 @@ class Initialize{
 
     async reInitialize(id){
         this.convTitle=null;
-        this.convId=null;
+        this.convId=id;
         this.uiManager.messagesDiv.innerHTML = '';
         await this.fetchConv(id);
     }
@@ -40,11 +40,11 @@ class Initialize{
                 alert('error while fetching conversations')
                 return
             }
-            let data = await response.json();
-            this.convTitle = data['title']
-            data = data['messages']
-            for(let i=0;i<data.length;i++){
-                const dict = data[i];
+            const data = await response.json();
+            this.convTitle = data['title'];
+            const arr = data['messages'];
+            for(let i=0;i<arr.length;i++){
+                const dict = arr[i];
                 if(dict['role']=='user'){
                     this.uiManager.appendUserMsg(dict['content'])
                 }
