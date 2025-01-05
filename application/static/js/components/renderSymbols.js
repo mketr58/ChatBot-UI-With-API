@@ -5,7 +5,8 @@ class RenderSymbols{
     renderAll(elem){
         this.renderText(elem);
         this.renderCode(elem);
-        this.renderMath(elem)
+        this.renderMath(elem);
+        elem.scrollIntoView({behavior: "smooth", block: "end"});
     }
     renderMath(elem) {
         let content = elem.innerHTML;
