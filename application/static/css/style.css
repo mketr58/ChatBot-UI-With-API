@@ -219,10 +219,11 @@ nav{
     font-size: medium; 
     font-weight: 300; 
     line-height: 1.6;
-    color: #b9b9b9; 
-    background-color: rgba(20,20,20,0.6);
+    color: #c1c1c1; 
+    background-color: rgba(28, 28, 28, 0.5);
     padding: 10px;
     border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.1)
 }
 
 .subHeading,.heading{
@@ -233,12 +234,16 @@ nav{
     margin-top: 2vh;
 }
 .subHeading{
-    background-color: rgba(51, 51, 51, 0.7);
+    background-color: rgba(59, 59, 59, 0.5);
+    border: 1px solid rgba(255,255,255,0.1)
 }
 .heading{
     background-color: rgba(119, 16, 238, 0.55);
-    box-shadow: 6px 6px rgb(32, 32, 32) ;
-
+    box-shadow: 6px 6px rgba(0, 0, 0, 0.5) ;
+}
+.boldText{
+    color: rgb(181, 181, 181);
+    font-family: 'Poppins';
 }
 code{
     border-radius: 15px;

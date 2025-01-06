@@ -4,7 +4,7 @@ class Initialize{
         this.convId;
         this.convTitle;
         this.uiManager = uiManager;
-        this.systemPrompt = `your response syntax should be: ***for heading*** \n ** for sub heading **`;
+        this.systemPrompt = `your response syntax should be: ###for heading### \n ** for sub heading ** \n *** for text highlight/bold text ***`;
         this.model = null;
     }
 

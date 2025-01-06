@@ -10,7 +10,7 @@ class Chat{
             "prompt": this.uiManager.userP.innerText.trim(),
             "convId": this.uiManager.initializer.convId,
             "system": this.uiManager.initializer.systemPrompt,
-            "temperature": 0.7,
+            "temperature": 0.4,
             "top_p": 0.9
         };
         try {

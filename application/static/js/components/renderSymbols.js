@@ -20,7 +20,8 @@ class RenderSymbols{
     }
     renderText(elem){
         elem.innerHTML = elem.innerHTML.replace(/<br\s*\/?>/g, '\n');
-        elem.innerHTML = elem.innerHTML.replace(/\*\*\*(.*?)\*\*\*/g, '<span class="heading">$1</span>');
+        elem.innerHTML = elem.innerHTML.replace(/\#\#\#(.*?)\#\#\#/g, '<span class="heading">$1</span>');
+        elem.innerHTML = elem.innerHTML.replace(/\*\*\*(.*?)\*\*\*/g, '<span class="boldText">$1</span>');
         elem.innerHTML = elem.innerHTML.replace(/\*\*(.*?)\*\*/g, '<span class="subHeading">$1</span>');
         elem.innerHTML = elem.innerHTML.replace(/\n/g, '<br>');
     }
