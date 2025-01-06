@@ -216,14 +216,15 @@ nav{
 }
 .ai p {
     opacity: 0.9;
-    font-size: medium; 
     font-weight: 300; 
+    font-size: medium;
     line-height: 1.6;
-    color: #c1c1c1; 
+    color: #c5c5c5; 
     background-color: rgba(28, 28, 28, 0.5);
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
-    border: 2px solid rgba(255,255,255,0.1)
+    border: 2px solid rgba(255,255,255,0.1);
+    font-family: 'Inter';
 }
 
 .subHeading,.heading{
@@ -241,10 +242,7 @@ nav{
     background-color: rgba(119, 16, 238, 0.55);
     box-shadow: 6px 6px rgba(0, 0, 0, 0.5) ;
 }
-.boldText{
-    color: rgb(181, 181, 181);
-    font-family: 'Poppins';
-}
+
 code{
     border-radius: 15px;
 }
