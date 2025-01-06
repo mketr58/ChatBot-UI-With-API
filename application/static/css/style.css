@@ -270,9 +270,10 @@ code{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 320px;
-    height: 300px;
+    height: 320px;
     display: flex;
     flex-direction: column;
+    gap: 0px;
     color: #d8d8d8;
     background-color: #222222;
     box-shadow: 6px 6px rgb(41, 41, 41) ;
@@ -281,12 +282,12 @@ code{
 }
 .alert p{
     float: left;
-    padding: 10px;
     font-family: 'Inter';
     font-weight: 300;
     font-size: 15px;
     color: #cfcfcf; 
     opacity: 0.9;
+    padding-left: 10px;
 }
 .closeAlert{
     margin-left: auto;
@@ -298,12 +299,25 @@ code{
     border-radius: 10px;
     color: #ffffff;
 }
+.discord {
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(211, 211, 211);
+    padding: 7.5px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #4A148C, #9c18e3);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    max-width: 77px;
+}
 .note{
     text-align: center;
     background-color: rgba(119, 16, 238, 0.55);
     box-shadow: 6px 6px rgb(32, 32, 32) ;
     margin: auto;
     width: 70px;
+    padding: 10px;
 }
 
 @media screen and (max-width: 780px){

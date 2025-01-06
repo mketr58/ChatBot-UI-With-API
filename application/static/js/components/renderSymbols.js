@@ -26,19 +26,35 @@ class RenderSymbols{
         elem.innerHTML = elem.innerHTML.replace(/\n/g, '<br>');
     }
     renderCode(element) {
-        let content = element.innerHTML;        
+        let content = element.innerHTML;
+    
         if (content.includes("```") && content.split("```").length >= 3) {
             content = content.replace(/```(\w*)<br>([\s\S]*?)```/g, (match, language, code) => {
                 code = code.replace(/<br>/g, '\n').trim();
-                language = language.trim() || 'text';
+                language = language.trim() || 'text';    
+                code = this.escapeHTML(code);
+    
                 return `<pre class="code-block"><code class="language-${language}">${code}</code></pre>`;
             });
-            
+    
             element.innerHTML = content;
+    
             element.querySelectorAll('code:not(.hljs)').forEach(block => {
                 hljs.highlightElement(block);
             });
         }
+    }
+    escapeHTML(str) {
+        return str.replace(/[&<>"']/g, function (char) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;',
+            };
+            return map[char] || char;
+        });
     }
   
 }
