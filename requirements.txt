@@ -1,2 +1,4 @@
 Flask
 requests
+googlesearch-python
+beautifulsoup4
