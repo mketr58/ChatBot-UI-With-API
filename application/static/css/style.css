@@ -319,6 +319,13 @@ code{
     width: 70px;
     padding: 10px;
 }
+.webSearch{
+    color: rgb(233, 233, 233);
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: x-large;
+}
 
 @media screen and (max-width: 780px){
     .menu{

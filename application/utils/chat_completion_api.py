@@ -1,8 +1,9 @@
 import requests,json
 from config import Response
+from application.utils.web_search import WebScarper
 class ChatCompletionAPI():
     def __init__(self):
-        pass
+        self.scarper = WebScarper()
     def make_request(
         self,
         method='POST',
@@ -11,9 +12,15 @@ class ChatCompletionAPI():
         json=None,
         url=None,
         messages=None,
-        headers=None ):
+        headers=None,
+        webSearch=False ):
         self.headers = headers
         self.messages = messages
+        if(webSearch):
+            data = self.scarper.scarpe(json['prompt'])
+            if(data!=None):
+                messages.append({"role": "system", "content": f"user used webSearch feature, heres the scarped result: {data}"})
+
         response = requests.request(
             url=url,
             json=json,
@@ -47,4 +54,4 @@ class ChatCompletionAPI():
                     yield str(data)
                     return
             self.messages.append({"role":"assistant","content":self.ai})
-        return Response(generator())
+        return Response(generator()) 

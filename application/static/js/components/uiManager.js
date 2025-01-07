@@ -16,6 +16,8 @@ class UIManager{
         this.newChat = document.getElementById('newChat');
         this.models = document.getElementById('models');
         this.initialized = false;
+        this.webSearchBtn = document.getElementById('webSearch');
+        this.webSearch = false;
         this.aiDiv;
         this.userDiv;
         this.aiP;
@@ -37,6 +39,15 @@ class UIManager{
         })
         this.newChat.addEventListener('click', async ()=>{
             await this.initializer.initialize();
+        })
+        this.webSearchBtn.addEventListener('click', ()=>{
+            if(this.webSearch){
+                this.webSearchBtn.style.color = 'white';
+            } else{
+                this.webSearchBtn.style.color = 'rgba(30,30,250,0.8)';
+            }
+            this.webSearch = !this.webSearch;
+            
         })
         document.getElementById('closeAlert').onclick = ()=>{
             document.getElementById('alert').style.display = 'none'

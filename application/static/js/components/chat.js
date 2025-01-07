@@ -10,8 +10,9 @@ class Chat{
             "prompt": this.uiManager.userP.innerText.trim(),
             "convId": this.uiManager.initializer.convId,
             "system": this.uiManager.initializer.systemPrompt,
-            "temperature": 0.4,
-            "top_p": 0.9
+            "temperature": 0.7,
+            "top_p": 0.9,
+            "webSearch": this.uiManager.webSearch
         };
         try {
             if(this.uiManager.initializer.convId==null){
