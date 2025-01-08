@@ -8,9 +8,12 @@ class WebScarper:
         pass
     def get_url(self,query):
         results = []
-        for result in search(query, num_results=5):
+        for result in search(query, num_results=3):
             results.append(result)
-        return random.choice(results)
+        if(results!=[]):
+            return random.choice(results)
+        else:
+            return None
     def fetch_url(self, url):
         try: 
             headers = { 
@@ -42,7 +45,7 @@ class WebScarper:
     def scarpe(self,query):
         url = self.get_url(query)
         data = self.fetch_url(url)
-        if(data==None):
+        if(data==None or url==None):
             return None
         return self.get_text(data)
     

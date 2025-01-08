@@ -325,7 +325,6 @@ code{
     cursor: pointer;
     border: none;
     font-size: x-large;
-    display: none;
 }
 
 @media screen and (max-width: 780px){
