@@ -1,48 +1,24 @@
 {
     "api": {
         "models": {
-            "Qwen2.5-Coder-32B-Instruct": {
-                "type": "Text Generation",
-                "api_url": "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-Coder-32B-Instruct/v1/chat/completions",
-                "headers": {
-                    "Content-Type": "application/json",
-                    "x-use-cache": "false",
-                    "config": {
-                        "comment": "This section runs Python code. It retrieves the API key from your environment using 'os'. You can use this for Authorization headers or replace it with another type of headers, like 'ApiKey'.",
-                        "Authorization": "Bearer os.environ.get('auth')"
-                }
-                }
-            },
-
-            "QwQ-32B-Preview": {
-                "type": "Text Generation",
-                "api_url": "https://api-inference.huggingface.co/models/Qwen/QwQ-32B-Preview/v1/chat/completions",
-                "headers": {
-                    "Content-Type": "application/json",
-                    "x-use-cache": "false",
-                    "config": {
-                        "comment": "This section runs Python code. It retrieves the API key from your environment using 'os'. You can use this for Authorization headers or replace it with another type of headers, like 'ApiKey'.",
-                        "Authorization": "Bearer os.environ.get('auth')"
-                }
-                }
-            },
-
-            "SmallThinker-3B-Preview": {
-                "type": "Text Generation",
-                "api_url": "https://api-inference.huggingface.co/models/PowerInfer/SmallThinker-3B-Preview/v1/chat/completions",
-                "headers": {
-                    "Content-Type": "application/json",
-                    "x-use-cache": "false",
-                    "config": {
-                        "comment": "This section runs Python code. It retrieves the API key from your environment using 'os'. You can use this for Authorization headers or replace it with another type of headers, like 'ApiKey'.",
-                        "Authorization": "Bearer os.environ.get('auth')"
-                }
-                }
-            },
+            
 
             "Mistral-Nemo-Instruct-2407": {
                 "type": "Text Generation",
                 "api_url": "https://api-inference.huggingface.co/models/mistralai/Mistral-Nemo-Instruct-2407/v1/chat/completions",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "x-use-cache": "false",
+                    "config": {
+                        "comment": "This section runs Python code. It retrieves the API key from your environment using 'os'. You can use this for Authorization headers or replace it with another type of headers, like 'ApiKey'.",
+                        "Authorization": "Bearer os.environ.get('auth')"
+                }
+                }
+            },
+
+           "SmallThinker-3B-Preview": {
+                "type": "Text Generation",
+                "api_url": "https://api-inference.huggingface.co/models/PowerInfer/SmallThinker-3B-Preview/v1/chat/completions",
                 "headers": {
                     "Content-Type": "application/json",
                     "x-use-cache": "false",
