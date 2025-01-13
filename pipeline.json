@@ -15,9 +15,9 @@
                 }
             },          
 
-            "phi-4": {
+            "phi-4-gguf": {
                 "type": "image-text-to-text",
-                "api_url": "https://api-inference.huggingface.co/models/microsoft/phi-4/v1/chat/completions",
+                "api_url": "https://api-inference.huggingface.co/models/microsoft/phi-4-gguf/v1/chat/completions",
                 "headers": {
                     "Content-Type": "application/json",
                     "x-use-cache": "false",
