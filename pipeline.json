@@ -15,6 +15,20 @@
                 }
             },          
 
+            "phi-4": {
+                "type": "image-text-to-text",
+                "api_url": "https://api-inference.huggingface.co/models/microsoft/phi-4/v1/chat/completions",
+                "headers": {
+                    "Content-Type": "application/json",
+                    "x-use-cache": "false",
+                    "config": {
+                        "comment": "This section runs Python code. It retrieves the API key from your environment using 'os'. You can use this for Authorization headers or replace it with another type of headers, like 'ApiKey'.",
+                        "Authorization": "Bearer os.environ.get('auth')"
+                }
+                }
+            },          
+          
+
             "Phi-3.5-mini-instruct": {
                 "type": "Text Generation",
                 "api_url": "https://api-inference.huggingface.co/models/microsoft/Phi-3.5-mini-instruct/v1/chat/completions",
